@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Metadata Version="1">
+  <Id>5fb1ad374a834607b88e0feb146007fb</Id>
+  <Name>Recording-2</Name>
+  <EventCount>1</EventCount>
+  <StartedUtc>2020-02-28T10:01:36.4259698Z</StartedUtc>
+  <EndedUtc>2020-02-28T10:05:49.6550710Z</EndedUtc>
+  <TotalTime>0</TotalTime>
+  <Signals />
+  <Sources>
+    <Source type="Station" id="{c1a5e089-e5e3-4860-a030-e5a90a2cc3fb}" displayName="SemesterProjekt_sim" />
+  </Sources>
+</Metadata>
