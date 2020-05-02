@@ -1,0 +1,34 @@
+WATCH Ver=2.00 PLCName=PLC1 CPUName=CPU TaskName=Program 
+Position X=0 Y=0 Width=0 Height=0 TabWidth Name=150 Type=0 Scope=0 Force=0 Index=28 ASCIIString=0
+                                    name                                     type force                                                            value level type len format place expand specs
+                             Fedder_Beer                                    USINT    0 "                                                               *"    0    5    1    2    1    0         
+                            Fedder_Crate                                    USINT    0 "                                                               *"    0    5    1    2    1    0         
+                        Fedder_Packaging                                    USINT    0 "                                                               *"    0    5    1    2    1    0         
+                        MOTOR_BeerBottle                                     BOOL    0 "                                                           FALSE"    0    1    1    2    1    0         
+                   MOTOR_BeerBottleStart                                     BOOL    0 "                                                           FALSE"    0    1    1    2    1    0         
+              MOTOR_BeerBottle_Station_1                                     BOOL    0 "                                                           FALSE"    0    1    1    2    1    0         
+                         MOTOR_BeerCrate                                     BOOL    0 "                                                           FALSE"    0    1    1    2    1    0         
+                 MOTOR_BeerCrateSlowDown                                     BOOL    0 "                                                           FALSE"    0    1    1    2    1    0         
+                    MOTOR_BeerCrateStart                                     BOOL    0 "                                                           FALSE"    0    1    1    2    1    0         
+               MOTOR_BeerCrate_Station_1                                     BOOL    0 "                                                           FALSE"    0    1    1    2    1    0         
+               MOTOR_BeerCrate_Station_2                                     BOOL    0 "                                                           FALSE"    0    1    1    2    1    0         
+                         MOTOR_Packaging                                     BOOL    0 "                                                           FALSE"    0    1    1    2    1    0         
+                    MOTOR_PackagingStart                                     BOOL    0 "                                                           FALSE"    0    1    1    2    1    0         
+                            New_Variable                                    USINT    0 "                                                               *"    0    5    1   10    1    0         
+                           SENSOR_Bottle                                     BOOL    0 "                                                           FALSE"    0    1    1    2    1    0         
+                            SENSOR_Crate                                     BOOL    0 "                                                           FALSE"    0    1    1    2    1    0         
+                        SENSOR_Station_1                                     BOOL    0 "                                                           FALSE"    0    1    1    2    1    0         
+                               PushCrate                                     BOOL    0 "                                                           FALSE"    0    1    1    2    1    0         
+                               DeleteAll                                     BOOL    0 "                                                           FALSE"    0    1    1    2    1    0         
+                             Feeder_Beer                                     BOOL    0 "                                                           FALSE"    0    1    1    2    1    0         
+                            Feeder_Crate                                     BOOL    0 "                                                           FALSE"    0    1    1    2    1    0         
+                        Feeder_Packaging                                     BOOL    0 "                                                            TRUE"    0    1    1    2    1    0         
+                    MOTOR_Station_1_Belt                                     BOOL    0 "                                                           FALSE"    0    1    1    2    1    0         
+                        SENSOR_Packaging                                     BOOL    0 "                                                           FALSE"    0    1    1    2    1    0         
+                 SENSOR_Packaging_Crates                                     BOOL    0 "                                                           FALSE"    0    1    1    2    1    0         
+                           STATE_MACHINE                                     DINT    0 "                                                               *"    0    4    1   10    1    0 e,0,STAR
+
+                        SENSOR_Station_2                                     BOOL    0 "                                                               *"    0    1    1    2    1    0         
+                        BeerCrateCounter                                    USINT    0 "                                                               1"    0    5    1   10    1    0         
+                           FACTORY_STATE                                     DINT    0 "                                                               2"    0    4    1   10    1    0 e,0,STAR
+

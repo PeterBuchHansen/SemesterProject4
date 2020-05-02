@@ -1,0 +1,339 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version="4.7.2.98"?>
+<Objects>
+  <Object
+    Path="C:\Users\emila\OneDrive\Dokumenter\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCSolution\PLC1\SolutionPLC\Logical\Package.pkg"
+    LogicalPath=""
+    Type="Package.ParentUnknown"
+    LastWriteTime="132328816942166575" />
+  <Object
+    Path="C:\Users\emila\OneDrive\Dokumenter\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCSolution\PLC1\SolutionPLC\Logical\Global.typ"
+    LogicalPath="Global.typ"
+    Type="File"
+    LastWriteTime="132328814507738361"
+    Private="false" />
+  <Object
+    Path="C:\Users\emila\OneDrive\Dokumenter\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCSolution\PLC1\SolutionPLC\Logical\Global.var"
+    LogicalPath="Global.var"
+    Type="File"
+    LastWriteTime="132328814507857901"
+    Private="false" />
+  <Object
+    Path="C:\Users\emila\OneDrive\Dokumenter\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCSolution\PLC1\SolutionPLC\Logical\Libraries\Package.pkg"
+    LogicalPath="Libraries"
+    Type="Package"
+    LastWriteTime="132328922654104421" />
+  <Object
+    Path="C:\Users\emila\OneDrive\Dokumenter\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCSolution\PLC1\SolutionPLC\Logical\Libraries\operator\binary.lby"
+    LogicalPath="Libraries.operator"
+    Type="Library"
+    LastWriteTime="132328814517777635" />
+  <Object
+    Path="C:\Users\emila\OneDrive\Dokumenter\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCSolution\PLC1\SolutionPLC\Logical\Libraries\operator\operator.fun"
+    LogicalPath="Libraries.operator.operator.fun"
+    Type="File"
+    LastWriteTime="132328814517717773"
+    Private="false" />
+  <Object
+    Path="C:\Users\emila\OneDrive\Dokumenter\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCSolution\PLC1\SolutionPLC\Logical\Libraries\operator\operator.typ"
+    LogicalPath="Libraries.operator.operator.typ"
+    Type="File"
+    LastWriteTime="132328814517747723"
+    Private="false" />
+  <Object
+    Path="C:\Users\emila\OneDrive\Dokumenter\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCSolution\PLC1\SolutionPLC\Logical\Libraries\operator\operator.var"
+    LogicalPath="Libraries.operator.operator.var"
+    Type="File"
+    LastWriteTime="132328814517767671"
+    Private="false" />
+  <Object
+    Path="C:\Users\emila\OneDrive\Dokumenter\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCSolution\PLC1\SolutionPLC\Logical\Libraries\runtime\binary.lby"
+    LogicalPath="Libraries.runtime"
+    Type="Library"
+    LastWriteTime="132328814520770310" />
+  <Object
+    Path="C:\Users\emila\OneDrive\Dokumenter\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCSolution\PLC1\SolutionPLC\Logical\Libraries\runtime\runtime.fun"
+    LogicalPath="Libraries.runtime.runtime.fun"
+    Type="File"
+    LastWriteTime="132328814520700486"
+    Private="false" />
+  <Object
+    Path="C:\Users\emila\OneDrive\Dokumenter\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCSolution\PLC1\SolutionPLC\Logical\Libraries\runtime\runtime.typ"
+    LogicalPath="Libraries.runtime.runtime.typ"
+    Type="File"
+    LastWriteTime="132328814520730402"
+    Private="false" />
+  <Object
+    Path="C:\Users\emila\OneDrive\Dokumenter\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCSolution\PLC1\SolutionPLC\Logical\Libraries\runtime\runtime.var"
+    LogicalPath="Libraries.runtime.runtime.var"
+    Type="File"
+    LastWriteTime="132328814520770310"
+    Private="false" />
+  <Object
+    Path="C:\Users\emila\OneDrive\Dokumenter\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCSolution\PLC1\SolutionPLC\Logical\Libraries\astime\binary.lby"
+    LogicalPath="Libraries.astime"
+    Type="Library"
+    LastWriteTime="132328814523862748" />
+  <Object
+    Path="C:\Users\emila\OneDrive\Dokumenter\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCSolution\PLC1\SolutionPLC\Logical\Libraries\astime\astime.fun"
+    LogicalPath="Libraries.astime.astime.fun"
+    Type="File"
+    LastWriteTime="132328814523793424"
+    Private="false" />
+  <Object
+    Path="C:\Users\emila\OneDrive\Dokumenter\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCSolution\PLC1\SolutionPLC\Logical\Libraries\astime\astime.typ"
+    LogicalPath="Libraries.astime.astime.typ"
+    Type="File"
+    LastWriteTime="132328814523822848"
+    Private="false" />
+  <Object
+    Path="C:\Users\emila\OneDrive\Dokumenter\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCSolution\PLC1\SolutionPLC\Logical\Libraries\astime\astime.var"
+    LogicalPath="Libraries.astime.astime.var"
+    Type="File"
+    LastWriteTime="132328814523852788"
+    Private="false" />
+  <Object
+    Path="C:\Users\emila\OneDrive\Dokumenter\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCSolution\PLC1\SolutionPLC\Logical\Libraries\AsIecCon\binary.lby"
+    LogicalPath="Libraries.AsIecCon"
+    Type="Library"
+    LastWriteTime="132328814527074915" />
+  <Object
+    Path="C:\Users\emila\OneDrive\Dokumenter\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCSolution\PLC1\SolutionPLC\Logical\Libraries\AsIecCon\AsIecCon.fun"
+    LogicalPath="Libraries.AsIecCon.AsIecCon.fun"
+    Type="File"
+    LastWriteTime="132328814527025017"
+    Private="false" />
+  <Object
+    Path="C:\Users\emila\OneDrive\Dokumenter\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCSolution\PLC1\SolutionPLC\Logical\Libraries\AsIecCon\AsIecCon.typ"
+    LogicalPath="Libraries.AsIecCon.AsIecCon.typ"
+    Type="File"
+    LastWriteTime="132328814527044968"
+    Private="false" />
+  <Object
+    Path="C:\Users\emila\OneDrive\Dokumenter\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCSolution\PLC1\SolutionPLC\Logical\Libraries\AsIecCon\AsIecCon.var"
+    LogicalPath="Libraries.AsIecCon.AsIecCon.var"
+    Type="File"
+    LastWriteTime="132328814527064932"
+    Private="false" />
+  <Object
+    Path="C:\Users\emila\OneDrive\Dokumenter\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCSolution\PLC1\SolutionPLC\Logical\Libraries\standard\binary.lby"
+    LogicalPath="Libraries.standard"
+    Type="Library"
+    LastWriteTime="132328922653944423" />
+  <Object
+    Path="C:\Users\emila\OneDrive\Dokumenter\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCSolution\PLC1\SolutionPLC\Logical\Libraries\standard\standard.fun"
+    LogicalPath="Libraries.standard.standard.fun"
+    Type="File"
+    LastWriteTime="132328922653834709"
+    Private="false" />
+  <Object
+    Path="C:\Users\emila\OneDrive\Dokumenter\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCSolution\PLC1\SolutionPLC\Logical\Libraries\standard\standard.typ"
+    LogicalPath="Libraries.standard.standard.typ"
+    Type="File"
+    LastWriteTime="132328922653874602"
+    Private="false" />
+  <Object
+    Path="C:\Users\emila\OneDrive\Dokumenter\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCSolution\PLC1\SolutionPLC\Logical\Libraries\standard\standard.var"
+    LogicalPath="Libraries.standard.standard.var"
+    Type="File"
+    LastWriteTime="132328922653894548"
+    Private="false" />
+  <Object
+    Path="C:\Users\emila\OneDrive\Dokumenter\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCSolution\PLC1\SolutionPLC\Logical\Program\IEC.prg"
+    LogicalPath="Program"
+    Type="Program"
+    LastWriteTime="132328816942136644" />
+  <Object
+    Path="C:\Users\emila\OneDrive\Dokumenter\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCSolution\PLC1\SolutionPLC\Logical\Program\Main.st"
+    LogicalPath="Program.Main.st"
+    Type="File"
+    LastWriteTime="132328929930448306"
+    Private="false" />
+  <Object
+    Path="C:\Users\emila\OneDrive\Dokumenter\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCSolution\PLC1\SolutionPLC\Logical\Program\Types.typ"
+    LogicalPath="Program.Types.typ"
+    Type="File"
+    LastWriteTime="132328929341840430"
+    Private="true" />
+  <Object
+    Path="C:\Users\emila\OneDrive\Dokumenter\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCSolution\PLC1\SolutionPLC\Logical\Program\Variables.var"
+    LogicalPath="Program.Variables.var"
+    Type="File"
+    LastWriteTime="132328928191396034"
+    Private="true" />
+  <Object
+    Path="C:\Users\emila\OneDrive\Dokumenter\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCSolution\PLC1\SolutionPLC\Physical\Config1\Config.pkg"
+    LogicalPath="Config1"
+    Type="Configuration.ParentUnknown"
+    LastWriteTime="132328814552772001" />
+  <Object
+    Path="C:\Users\emila\OneDrive\Dokumenter\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCSolution\PLC1\SolutionPLC\Physical\Config1\Hardware.hw"
+    LogicalPath="Config1.Hardware.hw"
+    Type="File"
+    LastWriteTime="132328817058568893"
+    Private="false" />
+  <Object
+    Path="C:\Users\emila\OneDrive\Dokumenter\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCSolution\PLC1\SolutionPLC\Physical\Config1\Hardware.hwl"
+    LogicalPath="Config1.Hardware.hwl"
+    Type="File"
+    LastWriteTime="132328836474056406"
+    Private="false" />
+  <Object
+    Path="C:\Users\emila\OneDrive\Dokumenter\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCSolution\PLC1\SolutionPLC\Physical\Config1\X20CP1586\Cpu.pkg"
+    LogicalPath="Config1.X20CP1586"
+    Type="Cpu"
+    LastWriteTime="132328814531125031" />
+  <Object
+    Path="C:\Users\emila\OneDrive\Dokumenter\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCSolution\PLC1\SolutionPLC\Physical\Config1\X20CP1586\Cpu.sw"
+    LogicalPath="Config1.X20CP1586.Cpu.sw"
+    Type="File"
+    LastWriteTime="132328922656803234"
+    Private="false" />
+  <Object
+    Path="C:\Users\emila\OneDrive\Dokumenter\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCSolution\PLC1\SolutionPLC\Physical\Config1\X20CP1586\Cpu.per"
+    LogicalPath="Config1.X20CP1586.Cpu.per"
+    Type="File"
+    LastWriteTime="132328814529898368"
+    Private="false" />
+  <Object
+    Path="C:\Users\emila\OneDrive\Dokumenter\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCSolution\PLC1\SolutionPLC\Physical\Config1\X20CP1586\IoMap.iom"
+    LogicalPath="Config1.X20CP1586.IoMap.iom"
+    Type="File"
+    LastWriteTime="132328814529937927"
+    Private="false" />
+  <Object
+    Path="C:\Users\emila\OneDrive\Dokumenter\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCSolution\PLC1\SolutionPLC\Physical\Config1\X20CP1586\PvMap.vvm"
+    LogicalPath="Config1.X20CP1586.PvMap.vvm"
+    Type="File"
+    LastWriteTime="132328814529987784"
+    Private="false" />
+  <Object
+    Path="C:\Users\emila\OneDrive\Dokumenter\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCSolution\PLC1\SolutionPLC\Physical\Config1\X20CP1586\Connectivity\Package.pkg"
+    LogicalPath="Config1.X20CP1586.Connectivity"
+    Type="Package"
+    LastWriteTime="132328814530237409" />
+  <Object
+    Path="C:\Users\emila\OneDrive\Dokumenter\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCSolution\PLC1\SolutionPLC\Physical\Config1\X20CP1586\Connectivity\OpcUA\Package.pkg"
+    LogicalPath="Config1.X20CP1586.Connectivity.OpcUA"
+    Type="Package"
+    LastWriteTime="132328814530227132" />
+  <Object
+    Path="C:\Users\emila\OneDrive\Dokumenter\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCSolution\PLC1\SolutionPLC\Physical\Config1\X20CP1586\TextSystem\Package.pkg"
+    LogicalPath="Config1.X20CP1586.TextSystem"
+    Type="Package"
+    LastWriteTime="132328814530296962" />
+  <Object
+    Path="C:\Users\emila\OneDrive\Dokumenter\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCSolution\PLC1\SolutionPLC\Physical\Config1\X20CP1586\UnitSystem\Package.pkg"
+    LogicalPath="Config1.X20CP1586.UnitSystem"
+    Type="Package"
+    LastWriteTime="132328814530346850" />
+  <Object
+    Path="C:\Users\emila\OneDrive\Dokumenter\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCSolution\PLC1\SolutionPLC\Physical\Config1\X20CP1586\AccessAndSecurity\Package.pkg"
+    LogicalPath="Config1.X20CP1586.AccessAndSecurity"
+    Type="Package"
+    LastWriteTime="132328814530835663" />
+  <Object
+    Path="C:\Users\emila\OneDrive\Dokumenter\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCSolution\PLC1\SolutionPLC\Physical\Config1\X20CP1586\AccessAndSecurity\UserRoleSystem\Package.pkg"
+    LogicalPath="Config1.X20CP1586.AccessAndSecurity.UserRoleSystem"
+    Type="Package"
+    LastWriteTime="132328814530476521" />
+  <Object
+    Path="C:\Users\emila\OneDrive\Dokumenter\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCSolution\PLC1\SolutionPLC\Physical\Config1\X20CP1586\AccessAndSecurity\UserRoleSystem\Role.role"
+    LogicalPath="Config1.X20CP1586.AccessAndSecurity.UserRoleSystem.Role.role"
+    Type="File"
+    LastWriteTime="132328814530446599"
+    Private="false" />
+  <Object
+    Path="C:\Users\emila\OneDrive\Dokumenter\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCSolution\PLC1\SolutionPLC\Physical\Config1\X20CP1586\AccessAndSecurity\UserRoleSystem\User.user"
+    LogicalPath="Config1.X20CP1586.AccessAndSecurity.UserRoleSystem.User.user"
+    Type="File"
+    LastWriteTime="132328814530466544"
+    Private="false" />
+  <Object
+    Path="C:\Users\emila\OneDrive\Dokumenter\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCSolution\PLC1\SolutionPLC\Physical\Config1\X20CP1586\AccessAndSecurity\CertificateStore\Package.pkg"
+    LogicalPath="Config1.X20CP1586.AccessAndSecurity.CertificateStore"
+    Type="Package"
+    LastWriteTime="132328814530725922" />
+  <Object
+    Path="C:\Users\emila\OneDrive\Dokumenter\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCSolution\PLC1\SolutionPLC\Physical\Config1\X20CP1586\AccessAndSecurity\CertificateStore\OwnCertificates\Package.pkg"
+    LogicalPath="Config1.X20CP1586.AccessAndSecurity.CertificateStore.OwnCertificates"
+    Type="Package"
+    LastWriteTime="132328814530586271" />
+  <Object
+    Path="C:\Users\emila\OneDrive\Dokumenter\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCSolution\PLC1\SolutionPLC\Physical\Config1\X20CP1586\AccessAndSecurity\CertificateStore\OwnCertificates\Certificates\Package.pkg"
+    LogicalPath="Config1.X20CP1586.AccessAndSecurity.CertificateStore.OwnCertificates.Certificates"
+    Type="Package"
+    LastWriteTime="132328814530546350" />
+  <Object
+    Path="C:\Users\emila\OneDrive\Dokumenter\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCSolution\PLC1\SolutionPLC\Physical\Config1\X20CP1586\AccessAndSecurity\CertificateStore\OwnCertificates\PrivateKeys\Package.pkg"
+    LogicalPath="Config1.X20CP1586.AccessAndSecurity.CertificateStore.OwnCertificates.PrivateKeys"
+    Type="Package"
+    LastWriteTime="132328814530576285" />
+  <Object
+    Path="C:\Users\emila\OneDrive\Dokumenter\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCSolution\PLC1\SolutionPLC\Physical\Config1\X20CP1586\AccessAndSecurity\CertificateStore\ThirdPartyCertificates\Package.pkg"
+    LogicalPath="Config1.X20CP1586.AccessAndSecurity.CertificateStore.ThirdPartyCertificates"
+    Type="Package"
+    LastWriteTime="132328814530656080" />
+  <Object
+    Path="C:\Users\emila\OneDrive\Dokumenter\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCSolution\PLC1\SolutionPLC\Physical\Config1\X20CP1586\AccessAndSecurity\CertificateStore\ThirdPartyCertificates\SoftwareCertificates\Package.pkg"
+    LogicalPath="Config1.X20CP1586.AccessAndSecurity.CertificateStore.ThirdPartyCertificates.SoftwareCertificates"
+    Type="Package"
+    LastWriteTime="132328814530646125" />
+  <Object
+    Path="C:\Users\emila\OneDrive\Dokumenter\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCSolution\PLC1\SolutionPLC\Physical\Config1\X20CP1586\AccessAndSecurity\CertificateStore\CertificateRevocationLists\Package.pkg"
+    LogicalPath="Config1.X20CP1586.AccessAndSecurity.CertificateStore.CertificateRevocationLists"
+    Type="Package"
+    LastWriteTime="132328814530686048" />
+  <Object
+    Path="C:\Users\emila\OneDrive\Dokumenter\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCSolution\PLC1\SolutionPLC\Physical\Config1\X20CP1586\AccessAndSecurity\CertificateStore\CertificateSigningRequests\Package.pkg"
+    LogicalPath="Config1.X20CP1586.AccessAndSecurity.CertificateStore.CertificateSigningRequests"
+    Type="Package"
+    LastWriteTime="132328814530716891" />
+  <Object
+    Path="C:\Users\emila\OneDrive\Dokumenter\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCSolution\PLC1\SolutionPLC\Physical\Config1\X20CP1586\AccessAndSecurity\TransportLayerSecurity\Package.pkg"
+    LogicalPath="Config1.X20CP1586.AccessAndSecurity.TransportLayerSecurity"
+    Type="Package"
+    LastWriteTime="132328814530765820" />
+  <Object
+    Path="C:\Users\emila\OneDrive\Dokumenter\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCSolution\PLC1\SolutionPLC\Physical\Config1\X20CP1586\AccessAndSecurity\Firewall\Package.pkg"
+    LogicalPath="Config1.X20CP1586.AccessAndSecurity.Firewall"
+    Type="Package"
+    LastWriteTime="132328814530825666" />
+  <Object
+    Path="C:\Users\emila\OneDrive\Dokumenter\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCSolution\PLC1\SolutionPLC\Physical\Config1\X20CP1586\AccessAndSecurity\Firewall\Rules.firewallRules"
+    LogicalPath="Config1.X20CP1586.AccessAndSecurity.Firewall.Rules.firewallRules"
+    Type="File"
+    LastWriteTime="132328814530825666"
+    Private="false" />
+  <Object
+    Path="C:\Users\emila\OneDrive\Dokumenter\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCSolution\PLC1\SolutionPLC\Physical\Config1\X20CP1586\mappControl\Package.pkg"
+    LogicalPath="Config1.X20CP1586.mappControl"
+    Type="Package"
+    LastWriteTime="132328814530895498" />
+  <Object
+    Path="C:\Users\emila\OneDrive\Dokumenter\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCSolution\PLC1\SolutionPLC\Physical\Config1\X20CP1586\mappMotion\Package.pkg"
+    LogicalPath="Config1.X20CP1586.mappMotion"
+    Type="Package"
+    LastWriteTime="132328814530945377" />
+  <Object
+    Path="C:\Users\emila\OneDrive\Dokumenter\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCSolution\PLC1\SolutionPLC\Physical\Config1\X20CP1586\mappServices\Package.pkg"
+    LogicalPath="Config1.X20CP1586.mappServices"
+    Type="Package"
+    LastWriteTime="132328814531005235" />
+  <Object
+    Path="C:\Users\emila\OneDrive\Dokumenter\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCSolution\PLC1\SolutionPLC\Physical\Config1\X20CP1586\mappView\Package.pkg"
+    LogicalPath="Config1.X20CP1586.mappView"
+    Type="Package"
+    LastWriteTime="132328814531055107" />
+  <Object
+    Path="C:\Users\emila\OneDrive\Dokumenter\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCSolution\PLC1\SolutionPLC\Physical\Config1\X20CP1586\mappCockpit\Package.pkg"
+    LogicalPath="Config1.X20CP1586.mappCockpit"
+    Type="Package"
+    LastWriteTime="132328814531104988" />
+  <Object
+    Path="C:\Users\emila\OneDrive\Dokumenter\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCSolution\PLC1\SolutionPLC\Physical\Config1\Hardware.jpg"
+    LogicalPath="Config1.Hardware.jpg"
+    Type="File"
+    LastWriteTime="132328836474095975"
+    Private="false" />
+</Objects>

@@ -1,0 +1,30 @@
+Sat May  2 12:21:14 2020
+COPYRIGHT (C) B&R Industrial Automation GmbH
+
+Sat May  2 12:21:14 2020
+No ARsim registration found!
+
+Sat May  2 12:21:14 2020
+InstanceName: 01d6206b68ab88f0
+
+Sat May  2 12:21:14 2020
+WorkingDirectory: C:\Users\emila\OneDrive\Dokumenter\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCSolution\PLC1\SolutionPLC\Temp\Simulation\Config1\X20CP1586\
+
+Sat May  2 12:21:14 2020
+COMMAND_COLDSTART
+
+Sat May  2 12:21:16 2020
+Version: C4.72
+
+Sat May  2 12:25:09 2020
+COMMAND_TERMINATE
+
+Sat May  2 12:25:10 2020
+COMMAND_COLDSTART
+
+Sat May  2 12:25:12 2020
+Version: C4.72
+
+Sat May  2 15:17:13 2020
+COMMAND_TERMINATE
+

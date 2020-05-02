@@ -1,0 +1,44 @@
+(*Bottle conveyer*)
+VAR
+	MOTOR_BeerBottle : BOOL;
+	MOTOR_BeerBottleStart : BOOL;
+	MOTOR_BeerBottle_Station_1 : BOOL;
+END_VAR
+(*Crate conveyer*)
+VAR
+	MOTOR_BeerCrateStart : BOOL;
+	MOTOR_BeerCrate : BOOL;
+	MOTOR_BeerCrateSlowDown : BOOL;
+	MOTOR_BeerCrate_Station_1 : BOOL;
+	MOTOR_Station_1_Belt : BOOL;
+END_VAR
+(*Packaging conveyer*)
+VAR
+	MOTOR_PackagingStart : BOOL;
+	MOTOR_Packaging : BOOL;
+	MOTOR_BeerCrate_Station_2 : BOOL;
+END_VAR
+(*Feeder*)
+VAR
+	Feeder_Crate : BOOL;
+	Feeder_Packaging : BOOL;
+	Feeder_Beer : BOOL;
+END_VAR
+(*Utils*)
+VAR
+	SENSOR_Bottle : BOOL;
+	SENSOR_Crate : BOOL;
+	SENSOR_Station_1 : BOOL;
+	SENSOR_Packaging : BOOL;
+	SENSOR_Packaging_Crates : BOOL;
+	BeerCrateCounter : USINT;
+END_VAR
+(*Miscellaneous*)
+VAR
+	FACTORY_STATE : FACTORY;
+	STATION_1_STATE : STATION_1;
+	Pallet_timer : TON;
+	STATION_2_STATE : STATION_2;
+	PushCrate : BOOL;
+	DeleteAll : BOOL;
+END_VAR
