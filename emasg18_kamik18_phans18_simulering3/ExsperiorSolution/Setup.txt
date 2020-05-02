@@ -17,6 +17,7 @@ Initialize () {
     
     /* Packaging conveyer */
     Start MOTOR_Packaging
+    Start MOTOR_BeerCrate_Station_2
 
     /* Utils */
     Reset counter
