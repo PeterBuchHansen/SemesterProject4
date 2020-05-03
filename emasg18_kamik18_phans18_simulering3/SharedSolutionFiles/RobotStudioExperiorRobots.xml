@@ -8,7 +8,11 @@
           <Robot id="{574b7648-59c0-4bc0-8ebc-c04d7ddcdcec}" type="IRB120_3_58" name="IRB120_3_58__01_2" />
           <Robot id="{ac2b52ca-d3d4-4873-a14f-df1b5b4290b5}" type="IRB760_450_318" name="IRB760_450_318__01" />
         </Robots>
-        <Signals />
+        <Signals>
+          <Signal name="DO1_Gripper" type="DigitalOutput" robotName="IRB120_3_58__01" />
+          <Signal name="DO2_Gripper" type="DigitalOutput" robotName="IRB120_3_58__01_2" />
+          <Signal name="DO3_Gripper" type="DigitalOutput" robotName="IRB760_450_318__01" />
+        </Signals>
       </Controller>
     </Controllers>
   </Station>
