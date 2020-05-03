@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ExperiorData version="1.0">
+  <Station localPath="C:\Users\Bruger\Documents\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\RobotStudioSulotion\Solution\Stations\Solution.rsstn">
+    <Controllers>
+      <Controller systemId="{6DCBBCE1-7201-47C7-834E-6A3AD597F668}" systemName="Controller">
+        <Robots>
+          <Robot id="{f7da927b-ba83-43fa-8191-3b65830eb488}" type="IRB120_3_58" name="IRB120_3_58__01" />
+          <Robot id="{574b7648-59c0-4bc0-8ebc-c04d7ddcdcec}" type="IRB120_3_58" name="IRB120_3_58__01_2" />
+          <Robot id="{ac2b52ca-d3d4-4873-a14f-df1b5b4290b5}" type="IRB760_450_318" name="IRB760_450_318__01" />
+        </Robots>
+        <Signals />
+      </Controller>
+    </Controllers>
+  </Station>
+</ExperiorData>

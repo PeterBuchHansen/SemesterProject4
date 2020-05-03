@@ -6,6 +6,5 @@
       <Parameter ID="ActivateDevice" Value="1" />
     </Connector>
     <Parameter ID="ConfigurationID" Value="PLCSolution2_Config1" />
-    <Parameter ID="Simulation" Value="1" />
   </Module>
 </Hardware>
