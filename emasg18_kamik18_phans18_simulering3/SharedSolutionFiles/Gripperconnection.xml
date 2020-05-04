@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ExperiorData version="1.0">
+  <Station localPath="C:\Users\Bruger\Documents\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\RobotStudioSulotion\Solution\Stations\Solution.rsstn">
+    <Controllers>
+      <Controller systemId="{F0F74CD4-2ABC-4B57-8D30-2EB6791DD0F3}" systemName="Controller">
+        <Robots>
+          <Robot id="{365529bf-11d3-4d9e-b6d9-11664597f6c4}" type="IRB120_3_58" name="IRB120_3_58__01" />
+          <Robot id="{7863e670-66de-4e69-a5e8-1dbd959d4178}" type="IRB120_3_58" name="IRB120_3_58__01_2" />
+          <Robot id="{519ab9e2-1a43-49f1-9609-681d1ff847e6}" type="IRB760_450_318" name="IRB760_450_318__01" />
+        </Robots>
+        <Signals>
+          <Signal name="Do3Gripper" type="DigitalOutput" robotName="IRB760_450_318__01" />
+        </Signals>
+      </Controller>
+    </Controllers>
+  </Station>
+</ExperiorData>
