@@ -36,10 +36,10 @@ VAR
 END_VAR
 (*Robot*)
 VAR
-	doRobotCrateReadyForBeer : BOOL;
-	diRobotBeerComplete : BOOL;
-	doRobotCrateReadyForPacking : BOOL;
-	diRobotPalletComplete : BOOL;
+	doRBeer : BOOL;
+	diBeerComplete : BOOL;
+	doRPacking : BOOL;
+	diPalletComplete : BOOL;
 END_VAR
 (*Miscellaneous*)
 VAR

@@ -9,6 +9,10 @@
           <Robot id="{519ab9e2-1a43-49f1-9609-681d1ff847e6}" type="IRB760_450_318" name="IRB760_450_318__01" />
         </Robots>
         <Signals>
+          <Signal name="DoCrateComplete" type="DigitalOutput" robotName="" />
+          <Signal name="Di2CrateReadyForPacking" type="DigitalInput" robotName="" />
+          <Signal name="DoPalletComplete" type="DigitalOutput" robotName="" />
+          <Signal name="Di1CrateReadyForFilling" type="DigitalInput" robotName="" />
           <Signal name="Do1Gripper" type="DigitalOutput" robotName="IRB120_3_58__01" />
           <Signal name="Do2Gripper" type="DigitalOutput" robotName="IRB120_3_58__01_2" />
           <Signal name="Do3Gripper" type="DigitalOutput" robotName="IRB760_450_318__01" />

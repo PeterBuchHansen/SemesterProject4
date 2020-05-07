@@ -1,6 +1,6 @@
 
 PROGRAM _INIT
-
+//
 END_PROGRAM
 
 
@@ -115,7 +115,7 @@ PROGRAM _CYCLIC
 				pushTimerInput := FALSE;
 				doSlowDownC := FALSE;
 				doPushC := TRUE;
-				doRobotCrateReadyForBeer := TRUE;
+				doRBeer := TRUE;
 				STATION_1_STATE := ROBOTACTION_STATION_1;
 			END_IF;
 		ROBOTACTION_STATION_1:
@@ -123,13 +123,13 @@ PROGRAM _CYCLIC
 				doBeforePusherC := FALSE;
 				doStartC := FALSE;
 			END_IF;
-			IF diRobotBeerComplete THEN
+			IF diBeerComplete THEN
 				doPushC := FALSE;
 				doAfterBeerFilling := TRUE;
 				STATION_1_STATE := STATION_1_PAUSE;
 			END_IF;
 		STATION_1_PAUSE:
-			doRobotCrateReadyForBeer := FALSE;
+			doRBeer := FALSE;
 			IF diSensorCrateFirstScan THEN
 				firstCrate := TRUE;
 				STATION_1_STATE := NEXT_CRATE;
@@ -152,12 +152,12 @@ PROGRAM _CYCLIC
 			
 		FILL_PALLET:
 			IF diSensorPackagingReady THEN
-				doRobotCrateReadyForPacking := TRUE;
+				doRPacking := TRUE;
 			ELSE
-				doRobotCrateReadyForPacking := FALSE;
+				doRPacking := FALSE;
 			END_IF;	
 			
-			IF diRobotPalletComplete OR palletFlag THEN
+			IF diPalletComplete OR palletFlag THEN
 				palletFlag := TRUE;
 				doStartP := TRUE;
 				IF NOT diSensorPalletInPos THEN
