@@ -1,34 +1,6 @@
 
 PROGRAM _INIT
-	(*Bottle conveyer*)
-	doStartB := TRUE;
-	doMotorB := TRUE;
-	do1StationB := TRUE;
 
-	(*Crate conveyer*)
-	doStartC := TRUE;
-	doMotorC := TRUE;
-	doStation1C := TRUE;
-	doStation2C := TRUE;
-	doBeforePusherC := TRUE;
-	doSlowDownC := FALSE; 
-	doAfterBeerFilling := FALSE;
-	
-	(*Packaging conveyer*)
-	doStartP := FALSE;
-	doMotorP := TRUE;
-	
-
-	(*Utils*)
-	doBeerCrateCounter := 1;
-	// If less than 40 new beer
-	doFeederC := TRUE;
-	doFeederB := TRUE;
-	doFeederP:= TRUE;
-	
-	doPushC := FALSE;
-	firstCrate := TRUE;
-	diSensorCrateSecondScan := FALSE;
 END_PROGRAM
 
 
@@ -37,37 +9,33 @@ PROGRAM _CYCLIC
 	CASE FACTORY_STATE OF			
 		START:
 			(*Bottle conveyer*)
-				doStartB := TRUE;
-				doMotorB := TRUE;
-				do1StationB := TRUE;
+			doStartB := TRUE;
+			doMotorB := TRUE;
+			do1StationB := TRUE;
 
-				(*Crate conveyer*)
-				doStartC := TRUE;
-				doMotorC := TRUE;
-				doStation1C := TRUE;
-				doStation2C := TRUE;
-				doBeforePusherC := TRUE;
-				doSlowDownC := FALSE; 
-				doAfterBeerFilling := FALSE;
+			(*Crate conveyer*)
+			doStartC := TRUE;
+			doMotorC := TRUE;
+			doStation1C := TRUE;
+			doStation2C := TRUE;
+			doBeforePusherC := TRUE;
+			doSlowDownC := FALSE; 
+			doAfterBeerFilling := FALSE;
 	
-				(*Packaging conveyer*)
-				doStartP := FALSE;
-				doMotorP := FALSE;
+			(*Packaging conveyer*)
+			doStartP := TRUE;
+			doMotorP := TRUE;
+	
+			(*Utils*)
+			doFeederC := TRUE;
+			doFeederB := TRUE;
+			doFeederP:= TRUE;
+	
+			doPushC := FALSE;
+			firstCrate := TRUE;
 
-				(*Utils*)
-				doBeerCrateCounter := 1;
-				// If less than 40 new beer
-				doFeederC := TRUE;
-				doFeederB := TRUE;
-				doFeederP:= FALSE;
 				
-				FACTORY_STATE := AWAIT_ORDER;
-		
-(*			IF di_Sensor_Bottle THEN
-				do_Motor_BeerBottle_Station_1 := FALSE;
-			ELSE 
-				do_Motor_BeerBottle_Station_1 := TRUE;
-			END_IF;*)
+			FACTORY_STATE := AWAIT_ORDER;
 			
 		AWAIT_ORDER:
 			
@@ -102,16 +70,32 @@ PROGRAM _CYCLIC
 			FACTORY_STATE := STOP;
 	END_CASE;
 
+	
+	IF diSensorPackagingReady THEN
+		doStation2C := FALSE;
+	ELSE
+		doStation2C := TRUE;
+	END_IF;
+				
+	IF diSensorBottle THEN
+		do1StationB := FALSE;
+		doStartB := FALSE;
+	ELSE
+		do1StationB := TRUE;
+		doStartB := TRUE;
+	END_IF;
+	
+	
 	// Timers for Case STATION_1_STATE
 	pushCompleteTimer(IN:= pushCompleteInput, PT := T#3s);
 	pushTimer(IN:=pushTimerInput, PT:=T#1s);
-	
 	
 	CASE STATION_1_STATE OF
 		NEXT_CRATE:
 			// Either we have the first package or we are waiting for the crate to move on.
 			IF (firstCrate AND diSensorCrateFirstScan AND NOT doAfterBeerFilling) THEN
 				doBeforePusherC := TRUE;
+				doStartC := TRUE;
 				doSlowDownC := TRUE;
 				firstCrate := FALSE;
 				doAfterBeerFilling := FALSE;
@@ -122,6 +106,7 @@ PROGRAM _CYCLIC
 			// If crate moves on:
 			IF diSensorFullCrate THEN
 				doBeforePusherC := TRUE;
+				doStartC := TRUE;
 				doSlowDownC := TRUE;
 				doAfterBeerFilling := FALSE;
 				pushTimerInput := TRUE;
@@ -139,6 +124,7 @@ PROGRAM _CYCLIC
 		ROBOTACTION_STATION_1:
 			IF diSensorCrateFirstScan THEN
 				doBeforePusherC := FALSE;
+				doStartC := FALSE;
 			END_IF;
 			IF pushCompleteTimer.Q THEN
 				pushCompleteInput := FALSE;
@@ -161,36 +147,34 @@ PROGRAM _CYCLIC
 	
 	CASE STATION_2_STATE OF
 		NO_PALLET:
-			doFeederP := TRUE;
-			STATION_2_STATE := NEXT_CRATE_SCANNER;
+			doStartP := TRUE;
+			IF diSensorPalletInPos THEN
+				doStartP := FALSE;
+				STATION_2_STATE := FILL_PALLET;		
+			END_IF;//
 			
-		NEXT_CRATE_SCANNER:
+		FILL_PALLET:
 			IF diSensorPackagingReady THEN
-				STATION_2_STATE := ROBOTACTION_STATION_2;				
-			END_IF;
-
-		ROBOTACTION_STATION_2:
-			doFeederP := FALSE;
-			IF diSensorPackagingReady THEN
-				doStation2C := FALSE;
 				doRobotCrateReadyForPacking := TRUE;
 			ELSE
-				doStation2C := TRUE;
 				doRobotCrateReadyForPacking := FALSE;
 			END_IF;	
 			
-			IF diRobotPalletComplete THEN
+			IF diRobotPalletComplete OR palletFlag THEN
+				palletFlag := TRUE;
 				doStartP := TRUE;
-				STATION_2_STATE := STATION_2_PAUSE;
+				IF NOT diSensorPalletInPos THEN
+					palletFlag := FALSE;
+					STATION_2_STATE := NO_PALLET;
+				END_IF;
 			END_IF;
-			
 		STATION_2_PAUSE:
-			IF diSensorPalletFreeFromStart THEN
-	  			doStartP := FALSE;
-				STATION_2_STATE := NO_PALLET;
-			END_IF;
+		
+			
 		
 	END_CASE;	
+				
+				
 	palletTimer();
 	pushTimer();
 	pushCompleteTimer();

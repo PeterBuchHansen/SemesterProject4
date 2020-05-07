@@ -29,11 +29,10 @@ END_VAR
 (*Utils*)
 VAR
 	diSensorBottle : BOOL;
-	diSensorCrateSecondScan : BOOL;
 	diSensorCrateFirstScan : BOOL;
 	diSensorFullCrate : BOOL;
 	diSensorPackagingReady : BOOL;
-	diSensorPalletFreeFromStart : BOOL;
+	diSensorPalletInPos : BOOL;
 	doBeerCrateCounter : USINT;
 END_VAR
 (*Robot*)
@@ -50,10 +49,13 @@ VAR
 	STATION_2_STATE : STATION_2;
 	firstCrate : BOOL;
 	pushCompleteTimer : TON;
+	bottleTimer : TON;
 	pushTimer : TON;
+	bottleInput : BOOL;
 	pushCompleteInput : BOOL;
 	pushTimerInput : BOOL;
 	doPushC : BOOL;
 	palletTimer : TON;
 	doDeleteAll : BOOL;
+	palletFlag : BOOL;
 END_VAR
