@@ -1,41 +1,40 @@
 (*Bottle conveyer*)
 VAR
-	do_Motor_BeerBottle : BOOL;
-	do_Motor_BeerBottleStart : BOOL;
-	do_Motor_BeerBottle_Station_1 : BOOL;
-	do_Motor_BeerBottle_Station_2 : BOOL;
+	doMotorB : BOOL;
+	doStartB : BOOL;
+	do1StationB : BOOL;
+	do2StationB : BOOL;
 END_VAR
 (*Crate conveyer*)
 VAR
-	do_Motor_BeerCrateStart : BOOL;
-	do_Motor_BeerCrate : BOOL;
-	do_Motor_BeerCrateSlowDown : BOOL;
-	do_Motor_BeerCrate_BeforePusher : BOOL;
-	do_Motor_Station_1_Belt : BOOL;
+	doStartC : BOOL;
+	doMotorC : BOOL;
+	doStation1C : BOOL;
+	doSlowDownC : BOOL;
+	doBeforePusherC : BOOL;
 END_VAR
 (*Packaging conveyer*)
 VAR
-	do_Motor_PackagingStart : BOOL;
-	do_Motor_BeerEndLine : BOOL;
-	do_Motor_Packaging : BOOL;
-	do_Motor_BeerCrate_Station_1 : BOOL;
-	do_Motor_BeerCrate_Station_2 : BOOL;
+	doAfterBeerFilling : BOOL;
+	doStartP : BOOL;
+	doStation2C : BOOL;
+	doMotorP : BOOL;
 END_VAR
 (*Feeder*)
 VAR
-	do_Feeder_Crate : BOOL;
-	do_Feeder_Packaging : BOOL;
-	do_Feeder_Beer : BOOL;
+	doFeederC : BOOL;
+	doFeederP : BOOL;
+	doFeederB : BOOL;
 END_VAR
 (*Utils*)
 VAR
-	di_Sensor_Bottle : BOOL;
-	di_Sensor_Crate : BOOL;
-	di_Sensor_Crate_1 : BOOL;
-	di_Sensor_Station_1 : BOOL;
-	di_Sensor_Packaging : BOOL;
-	di_Sensor_Packaging_Crates : BOOL;
-	do_BeerCrateCounter : USINT;
+	diSensorBottle : BOOL;
+	diSensorCrateSecondScan : BOOL;
+	diSensorCrateFirstScan : BOOL;
+	diSensorFullCrate : BOOL;
+	diSensorPackagingReady : BOOL;
+	diSensorPalletReady : BOOL;
+	doBeerCrateCounter : USINT;
 END_VAR
 (*Miscellaneous*)
 VAR
@@ -43,9 +42,11 @@ VAR
 	STATION_1_STATE : STATION_1;
 	STATION_2_STATE : STATION_2;
 	firstCrate : BOOL;
-	push_complete_timer : TON;
-	push_timer : TON;
-	pallet_timer : TON;
-	do_PushCrate : BOOL;
-	do_DeleteAll : BOOL;
+	pushCompleteTimer : TON;
+	pushTimer : TON;
+	pushCompleteInput : BOOL;
+	pushTimerInput : BOOL;
+	palletTimer : TON;
+	doPushCrate : BOOL;
+	doDeleteAll : BOOL;
 END_VAR

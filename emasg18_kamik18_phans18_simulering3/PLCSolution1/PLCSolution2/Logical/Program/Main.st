@@ -1,150 +1,151 @@
 
 PROGRAM _INIT
 	(*Bottle conveyer*)
-	do_Motor_BeerBottle := TRUE;
-	do_Motor_BeerBottleStart := TRUE;
-	do_Motor_BeerBottle_Station_1 := TRUE;
+	doStartB := TRUE;
+	doMotorB := TRUE;
+	do1StationB := TRUE;
 
 	(*Crate conveyer*)
-	do_Motor_BeerCrateStart := TRUE;
-	do_Motor_BeerCrate := TRUE;
-	//do_Motor_BeerCrate_Station_1 := TRUE;
-	do_Motor_BeerCrate_BeforePusher := FALSE;
-	//do_Motor_Station_1_Belt := FALSE;
-	do_Motor_BeerCrateSlowDown := FALSE;
-
-	(*Packaging conveyer*
-	do_Motor_PackagingStart := TRUE;
-	do_Motor_Packaging := TRUE;
-	do_Motor_BeerCrate_Station_2 := TRUE;
-
-	(*Utils*
-	do_BeerCrateCounter := 1;
-	// If less than 40 new beer
-	do_Feeder_Crate := TRUE;
-	do_Feeder_Beer := TRUE;
-	do_Feeder_Packaging:= TRUE;
+	doStartC := TRUE;
+	doMotorC := TRUE;
+	doStation1C := TRUE;
+	doStation2C := TRUE;
+	doBeforePusherC := TRUE;
+	doSlowDownC := FALSE; 
+	doAfterBeerFilling := FALSE;
 	
-	do_PushCrate := FALSE;
+	(*Packaging conveyer*)
+	doStartP := FALSE;
+	doMotorP := FALSE;
+
+	(*Utils*)
+	doBeerCrateCounter := 1;
+	// If less than 40 new beer
+	doFeederC := TRUE;
+	doFeederB := TRUE;
+	doFeederP:= FALSE;
+	
+	doPushCrate := FALSE;
 	firstCrate := TRUE;
-	di_Sensor_Crate_1 := TRUE;	*)
+	diSensorCrateSecondScan := FALSE;
 END_PROGRAM
 
 
 PROGRAM _CYCLIC
-(*	CASE FACTORY_STATE OF			
+
+	CASE FACTORY_STATE OF			
 		START:
-			IF di_Sensor_Crate_1 THEN
-				FACTORY_STATE := PAUSE;
-			ELSE
-			(*Bottle conveyer*
-			do_Motor_BeerBottle := TRUE;
-			do_Motor_BeerBottleStart := TRUE;
-			do_Motor_BeerBottle_Station_1 := TRUE;
-			do_Motor_BeerBottle_Station_2 := TRUE;
+			(*Bottle conveyer*)
+			doStartB := TRUE;
+			doMotorB := TRUE;
+			do1StationB := TRUE;
 
-			(*Crate conveyer*
-			do_Motor_BeerCrateStart := TRUE;
-			do_Motor_BeerCrate := TRUE;
-			do_Motor_BeerCrate_Station_1 := TRUE;
-			do_Motor_BeerCrate_BeforePusher := TRUE;
-			do_Motor_BeerCrateSlowDown := FALSE;
-
-			(*Packaging conveyer*
-			do_Motor_PackagingStart := TRUE;
-			do_Motor_Packaging := TRUE;
-			do_Motor_BeerCrate_Station_2 := TRUE;
-
-			(*Utils*
-			do_BeerCrateCounter := 1;
-			// If less than 40 new beer
-			do_Feeder_Crate := TRUE;
-			do_Feeder_Beer := TRUE;
-			do_Feeder_Packaging:= TRUE;
+			(*Crate conveyer*)
+			doStartC := TRUE;
+			doMotorC := TRUE;
+			doStation1C := TRUE;
+			doStation2C := TRUE;
+			doBeforePusherC := TRUE;
+			doSlowDownC := FALSE; 
+			doAfterBeerFilling := FALSE;
 	
-			do_PushCrate := FALSE;
+			(*Packaging conveyer*)
+			doStartP := FALSE;
+			doMotorP := FALSE;
+
+			(*Utils*)
+			doBeerCrateCounter := 1;
+			// If less than 40 new beer
+			doFeederC := TRUE;
+			doFeederB := TRUE;
+			doFeederP:= FALSE;
 				
-			END_IF;
+			FACTORY_STATE := AWAIT_ORDER;
 		
 (*			IF di_Sensor_Bottle THEN
 				do_Motor_BeerBottle_Station_1 := FALSE;
 			ELSE 
 				do_Motor_BeerBottle_Station_1 := TRUE;
-			END_IF;*
+			END_IF;*)
 			
-		PAUSE:
+		AWAIT_ORDER:
 			
 		STOP:
-			(*Bottle conveyer*
-			do_Motor_BeerBottle := FALSE;
-			do_Motor_BeerBottleStart := FALSE;
-			do_Motor_BeerBottle_Station_1 := FALSE;
+			(*Bottle conveyer*)
+			doStartB := FALSE;
+			doMotorB := FALSE;
+			do1StationB := FALSE;
 
-			(*Crate conveyer*
-			do_Motor_BeerCrateStart := FALSE;
-			do_Motor_BeerCrate := FALSE;
-			do_Motor_BeerCrate_Station_1 := FALSE;
-			do_Motor_BeerCrateSlowDown := FALSE;
-			do_Motor_BeerCrate_BeforePusher := FALSE;
+			(*Crate conveyer*)
+			doStartC := FALSE;
+			doMotorC := FALSE;
+			doStation1C := FALSE;
+			doStation2C := FALSE;
+			doBeforePusherC := FALSE;
+			doSlowDownC := FALSE; 
+			doAfterBeerFilling := FALSE;
+	
+			(*Packaging conveyer*)
+			doStartP := FALSE;
+			doMotorP := FALSE;
 
-			(*Packaging conveyer*
-			do_Motor_PackagingStart := FALSE;
-			do_Motor_Packaging := FALSE;
-			do_Motor_BeerCrate_Station_2 := FALSE;
-			do_Motor_Station_1_Belt := FALSE;
-
-			(*Utils*
-			do_BeerCrateCounter := 1;
+			(*Utils*)
+			doBeerCrateCounter := 1;
 			// If less than 40 new beer
-			do_Feeder_Crate := FALSE;
-			do_Feeder_Beer := FALSE;
-			do_Feeder_Packaging:= FALSE;
-			do_PushCrate := FALSE;
+			doFeederC := FALSE;
+			doFeederB := FALSE;
+			doFeederP:= FALSE;
 		
 		RESET:
-			do_DeleteAll := TRUE;
+			doDeleteAll := TRUE;
 			FACTORY_STATE := STOP;
 	END_CASE;
+
+	// Timers for Case STATION_1_STATE
+	pushCompleteTimer(IN:= pushCompleteInput, PT := T#1s);
+	pushTimer(IN:=pushTimerInput, PT:=T#3s);
+	
 	
 	CASE STATION_1_STATE OF
 		NEXT_CRATE:
-			IF di_Sensor_Crate THEN
-	  			do_Motor_BeerCrateSlowDown := FALSE;
-			END_IF;
-			IF (firstCrate AND di_Sensor_Crate) THEN
-				do_Motor_BeerCrateSlowDown := TRUE;
+			// Either we have the first package or we are waiting for the crate to move on.
+			IF (firstCrate AND diSensorCrateFirstScan) THEN
+				doSlowDownC := TRUE;
 				firstCrate := FALSE;
+				pushTimerInput := TRUE;
 				STATION_1_STATE := PUSH; 
 				//do_Motor_BeerBottle_Station_1 := TRUE;	
 			END_IF;
-			IF di_Sensor_Station_1 THEN
-				do_Motor_BeerCrate_BeforePusher := TRUE;
-				do_Motor_BeerCrateSlowDown := TRUE;
-				do_Motor_Station_1_Belt := FALSE;
+			// If crate moves on:
+			IF diSensorFullCrate THEN
+				doBeforePusherC := TRUE;
+				doSlowDownC := TRUE;
+				doAfterBeerFilling := FALSE;
+				pushTimerInput := TRUE;
 				STATION_1_STATE := PUSH;
 			END_IF;
+			
 		PUSH:
-			push_timer(IN:=TRUE, PT:=T#800ms);
-			IF push_timer.Q THEN
-				push_timer.IN := FALSE;
-				do_Motor_BeerCrateSlowDown := FALSE;
-				do_PushCrate := TRUE;
+			IF pushTimer.Q THEN
+				pushTimerInput := FALSE;
+				doSlowDownC := FALSE;
+				doPushCrate := TRUE;
+				pushCompleteInput := TRUE;
 				STATION_1_STATE := ROBOTACTION_STATION_1;
 			END_IF;
 		ROBOTACTION_STATION_1:
-			IF di_Sensor_Crate  THEN
-				do_Motor_BeerCrate_BeforePusher := FALSE;
+			IF diSensorCrateFirstScan THEN
+				doBeforePusherC := FALSE;
 			END_IF;
-			push_complete_timer(IN:= TRUE, PT := T#1s200ms);
-			IF push_complete_timer.Q THEN
-				push_complete_timer.IN := FALSE;
-				do_PushCrate := FALSE;
-				do_Motor_Station_1_Belt := TRUE;
+			IF pushCompleteTimer.Q THEN
+				pushCompleteInput := FALSE;
+				doPushCrate := FALSE;
+				doAfterBeerFilling := TRUE;
 			END_IF;
 			// Do action
 			STATION_1_STATE := STATION_1_PAUSE;
 		STATION_1_PAUSE:
-		//			STATION_1_STATE := NEXT_CRATE;
+			STATION_1_STATE := NEXT_CRATE;
 
 	END_CASE;
 	
@@ -187,10 +188,10 @@ PROGRAM _CYCLIC
 			STATION_2_STATE := STATION_2_PAUSE;
 		
 	END_CASE*);	
-	(*pallet_timer();
-	push_timer();
-	push_complete_timer();
-	*)
+	palletTimer();
+	pushTimer();
+	pushCompleteTimer();
+	
 	END_PROGRAM
 
 

@@ -3,7 +3,7 @@ TYPE
 	FACTORY : 
 		(
 		START,
-		PAUSE,
+		AWAIT_ORDER,
 		STOP,
 		RESET
 	);
@@ -23,3 +23,4 @@ TYPE
 		NO_PALLET
 	);
 END_TYPE
+
