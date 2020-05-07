@@ -59,8 +59,6 @@ PROGRAM _CYCLIC
 			doMotorP := FALSE;
 
 			(*Utils*)
-			doBeerCrateCounter := 1;
-			// If less than 40 new beer
 			doFeederC := FALSE;
 			doFeederB := FALSE;
 			doFeederP:= FALSE;
@@ -87,8 +85,7 @@ PROGRAM _CYCLIC
 	
 	
 	// Timers for Case STATION_1_STATE
-	pushCompleteTimer(IN:= pushCompleteInput, PT := T#3s);
-	pushTimer(IN:=pushTimerInput, PT:=T#1s);
+	pushTimer(IN:=pushTimerInput, PT:=T#800ms);
 	
 	CASE STATION_1_STATE OF
 		NEXT_CRATE:
@@ -118,7 +115,7 @@ PROGRAM _CYCLIC
 				pushTimerInput := FALSE;
 				doSlowDownC := FALSE;
 				doPushC := TRUE;
-				pushCompleteInput := TRUE;
+				doRobotCrateReadyForBeer := TRUE;
 				STATION_1_STATE := ROBOTACTION_STATION_1;
 			END_IF;
 		ROBOTACTION_STATION_1:
@@ -126,13 +123,13 @@ PROGRAM _CYCLIC
 				doBeforePusherC := FALSE;
 				doStartC := FALSE;
 			END_IF;
-			IF pushCompleteTimer.Q THEN
-				pushCompleteInput := FALSE;
+			IF diRobotBeerComplete THEN
 				doPushC := FALSE;
 				doAfterBeerFilling := TRUE;
 				STATION_1_STATE := STATION_1_PAUSE;
 			END_IF;
 		STATION_1_PAUSE:
+			doRobotCrateReadyForBeer := FALSE;
 			IF diSensorCrateFirstScan THEN
 				firstCrate := TRUE;
 				STATION_1_STATE := NEXT_CRATE;

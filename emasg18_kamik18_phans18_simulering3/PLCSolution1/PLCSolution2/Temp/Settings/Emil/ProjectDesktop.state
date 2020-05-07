@@ -1,3 +1,0 @@
-<?xml version="1.0"?>
-<?AutomationStudio Version=3.0?>
-<Project xmlns="http://br-automation.co.at/AS/Project"><Active ID="0"/><Configuration Name="Config1"/><ConfigurationFiles xmlns="" ConfigurationName="Config1" ActiveConfigurationFile="\Logical\Program\Variables.var"><ConfigurationFile Placement="\Logical\Program\Main.st,Program,2,44,0,1,-1,-1,-1,-1,2,24,1361,635"/><ConfigurationFile Placement="\Physical\Config1\Hardware.hwl,Config1,3,44,0,1,-1,-1,-1,-1,2,24,1361,635"/><ConfigurationFile Placement="\Logical\Program\Types.typ,Program,2,44,0,1,-1,-1,-1,-1,2,24,1361,635"/><ConfigurationFile Placement="\Logical\Program\Variables.var,Program,2,44,0,1,-1,-1,-1,-1,2,24,1361,635"/></ConfigurationFiles></Project>

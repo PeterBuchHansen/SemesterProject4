@@ -33,7 +33,6 @@ VAR
 	diSensorFullCrate : BOOL;
 	diSensorPackagingReady : BOOL;
 	diSensorPalletInPos : BOOL;
-	doBeerCrateCounter : USINT;
 END_VAR
 (*Robot*)
 VAR
