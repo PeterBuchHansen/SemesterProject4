@@ -1,0 +1,2 @@
+PLCSolution2 | Config1 | Build
+mingw32-make.exe, Error = False. Call = mingw32-make.exe  -r -f "C:\Users\Bruger\Documents\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCSolution1\PLCSolution2\Temp\Objects\Config1\X20CP1586\#cpu_tp.mak" -k
