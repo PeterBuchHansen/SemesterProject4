@@ -1,0 +1,70 @@
+Initialize () {
+    /* Feeder */
+    Send 5 beer crates
+    Send 5 * 30 (150) bottles
+    Send 1 pallet
+
+    /* Beer bottle conveyer */
+    Start MOTOR_BeerBottleStart
+    Start MOTOR_BeerBottle
+    Start MOTOR_BeerBottle_Station_1
+
+    /* Beer crate conveyer */
+    Start MOTOR_BeerCrateStart
+    Start MOTOR_BeerCrate
+    Start MOTOR_BeerCrate_Station_1
+    Start MOTOR_BeerCrateSlowDown
+    
+    /* Packaging conveyer */
+    Start MOTOR_Packaging
+    Start MOTOR_BeerCrate_Station_2
+
+    /* Utils */
+    Reset counter
+    Set SENSOR_Bottle to active high
+    Set SENSOR_Crates to active high
+    Set SENSOR_Station_1 to active high
+}
+
+
+Loop () {
+    Swicth(StateFillingCrate) {
+        case (SENSOR_Crates)  :
+            if (SENSOR_Crates  falling_edge) {
+                Stop MOTOR_BeerCrateSlowDown
+                Push crate and retract when complete
+                StateFillingCrate= Robot activation
+            }
+        case (Robot activation) :
+            if (SENSOR_Bottle) {
+                Start filling the crate
+            }
+            if (Crate == full) {
+                StateFillingCrate= Move crate to palletizing
+            }
+        case (Move crate to palletizing) :
+            Start MOTOR_Station_1_Belt
+            if (SENSOR_Station_1 falling_edge) {
+                Stop MOTOR_Station_1_Belt
+                Start MOTOR_BeerCrateSlowDown
+                StateFillingCrate= SENSOR_Crates
+                Increment counter
+                Send 1 crate
+                Send 30 beers
+            }
+    }
+	
+    if (Pallet isfull) {
+        Start MOTOR_PackagingStart
+        Send 1 pallet
+    } else {
+	Stop MOTOR_PackagingStart
+    } 
+
+    if (SENSOR_Packaging_Crates) {
+        Stop MOTOR_BeerCrate_Station_2
+        Læs på pallen
+    } else {
+        Start MOTOR_BeerCrate_Station_2
+    }
+}
