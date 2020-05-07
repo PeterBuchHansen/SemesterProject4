@@ -5,10 +5,10 @@
     <ConnectionParameters>/RT=1000 /DAIP=127.0.0.1 /REPO=11160 /ANSL=1 /AM=* /PT=11169</ConnectionParameters>
   </Connection>
   <AsProject>
-    <ApjFullFileName>C:\Users\Bruger\Documents\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCforDesktop\PLCSolution2\PLCSolution2.apj</ApjFullFileName>
+    <ApjFullFileName>C:\Users\Emil\Documents\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCforDesktop\PLCSolution2\PLCSolution2.apj</ApjFullFileName>
     <ProjectName>PLCSolution2</ProjectName>
     <ActiveConfigurationName>Config1</ActiveConfigurationName>
-    <LicenseDataFolder>C:\Users\Bruger\Documents\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCforDesktop\PLCSolution2\Temp\Objects\Config1\X20CP1586</LicenseDataFolder>
+    <LicenseDataFolder>C:\Users\Emil\Documents\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCforDesktop\PLCSolution2\Temp\Objects\Config1\X20CP1586</LicenseDataFolder>
   </AsProject>
   <General>
     <DeleteParameterFile>false</DeleteParameterFile>

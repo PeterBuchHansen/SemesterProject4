@@ -67,14 +67,29 @@ PROGRAM _CYCLIC
 			doDeleteAll := TRUE;
 			FACTORY_STATE := STOP;
 	END_CASE;
-
 	
+	(*Non case dependent if statements*)
+	
+	(*Prepare next crate*)	
+	IF (doBeforePusherC AND NOT diSensorCrateSecondScan) THEN
+		doStation1C := TRUE;
+	ELSIF (NOT diSensorCrateFirstScan AND crateFlag) THEN
+		crateFlag := FALSE;
+		doStation1C := FALSE;
+	ELSIF diSensorCrateFirstScan THEN
+		crateFlag := TRUE;
+	ELSIF (doBeforePusherC AND diSensorCrateFirstScan AND crateFlag) THEN
+		doStation1C := TRUE;
+	END_IF;
+	
+	(*Stop crate delivery*)
 	IF diSensorPackagingReady THEN
 		doStation2C := FALSE;
 	ELSE
 		doStation2C := TRUE;
 	END_IF;
-				
+
+	(*Stop bottle feeder if line is full*)
 	IF diSensorBottle THEN
 		do1StationB := FALSE;
 		doStartB := FALSE;
@@ -84,13 +99,13 @@ PROGRAM _CYCLIC
 	END_IF;
 	
 	
-	// Timers for Case STATION_1_STATE
+	(* Timer for Case STATION_1_STATE *)
 	pushTimer(IN:=pushTimerInput, PT:=T#800ms);
 	
 	CASE STATION_1_STATE OF
 		NEXT_CRATE:
 			// Either we have the first package or we are waiting for the crate to move on.
-			IF (firstCrate AND diSensorCrateFirstScan AND NOT doAfterBeerFilling) THEN
+			IF (firstCrate AND diSensorCrateSecondScan AND NOT doAfterBeerFilling) THEN
 				doBeforePusherC := TRUE;
 				doStartC := TRUE;
 				doSlowDownC := TRUE;
@@ -119,7 +134,7 @@ PROGRAM _CYCLIC
 				STATION_1_STATE := ROBOTACTION_STATION_1;
 			END_IF;
 		ROBOTACTION_STATION_1:
-			IF diSensorCrateFirstScan THEN
+			IF diSensorCrateSecondScan THEN
 				doBeforePusherC := FALSE;
 				doStartC := FALSE;
 			END_IF;
@@ -130,10 +145,9 @@ PROGRAM _CYCLIC
 			END_IF;
 		STATION_1_PAUSE:
 			doRBeer := FALSE;
-			IF diSensorCrateFirstScan THEN
+			IF diSensorCrateSecondScan THEN
 				firstCrate := TRUE;
 				STATION_1_STATE := NEXT_CRATE;
-				// Send new crate
 			END_IF;
 			IF diSensorFullCrate THEN
 				doAfterBeerFilling := FALSE;

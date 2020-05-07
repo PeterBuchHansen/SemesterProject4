@@ -29,6 +29,7 @@ END_VAR
 (*Utils*)
 VAR
 	diSensorBottle : BOOL;
+	diSensorCrateSecondScan : BOOL;
 	diSensorCrateFirstScan : BOOL;
 	diSensorFullCrate : BOOL;
 	diSensorPackagingReady : BOOL;
@@ -57,4 +58,5 @@ VAR
 	palletTimer : TON;
 	doDeleteAll : BOOL;
 	palletFlag : BOOL;
+	crateFlag : BOOL;
 END_VAR
