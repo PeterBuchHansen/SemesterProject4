@@ -4,11 +4,7 @@
   <TaskClass
     Name="Cyclic#1" />
   <TaskClass
-    Name="Cyclic#2" />
-  <TaskClass
-    Name="Cyclic#3" />
-  <TaskClass
-    Name="Cyclic#4">
+    Name="Cyclic#2">
     <Task
       Name="Program"
       Disable="false"
@@ -22,6 +18,10 @@
         Path="C:\Users\Emil\Documents\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCforDesktop\PLCSolution2\Logical\Program\Variables.var" />
     </Task>
   </TaskClass>
+  <TaskClass
+    Name="Cyclic#3" />
+  <TaskClass
+    Name="Cyclic#4" />
   <TaskClass
     Name="Cyclic#5" />
   <TaskClass

@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BuildReasons>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp1586\program\main.st.o">
-    <BuildReason>Target "main.st.o" does not exist</BuildReason>
+    <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\logical\program\main.st" differs.
+</BuildReason>
   </Rule>
   <Rule ID="$(AS_PROJECT_PATH)\temp\objects\config1\x20cp1586\program\_bur_pvdef.st.o">
     <BuildReason>Prerequiste "$(AS_PROJECT_PATH)\temp\objects\config1\x20cp1586\program\main.st.o" differs.

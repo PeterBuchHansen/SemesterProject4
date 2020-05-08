@@ -1,21 +1,21 @@
-Thu May  7 20:25:17 2020
+Fri May  8 07:57:06 2020
 COPYRIGHT (C) B&R Industrial Automation GmbH
 
-Thu May  7 20:25:17 2020
+Fri May  8 07:57:06 2020
 No ARsim registration found!
 
-Thu May  7 20:25:17 2020
-InstanceName: 01d6249cdbd84450
+Fri May  8 07:57:06 2020
+InstanceName: 01d624fd81003a90
 
-Thu May  7 20:25:17 2020
+Fri May  8 07:57:06 2020
 WorkingDirectory: C:\Users\Emil\Documents\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCforDesktop\PLCSolution2\Temp\Simulation\Config1\X20CP1586\
 
-Thu May  7 20:25:17 2020
+Fri May  8 07:57:06 2020
 COMMAND_COLDSTART
 
-Thu May  7 20:25:19 2020
+Fri May  8 07:57:08 2020
 Version: C4.72
 
-Thu May  7 20:59:11 2020
+Fri May  8 08:53:29 2020
 COMMAND_TERMINATE
 

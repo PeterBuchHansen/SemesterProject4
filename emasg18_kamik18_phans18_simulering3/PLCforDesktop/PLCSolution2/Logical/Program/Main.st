@@ -57,7 +57,7 @@ PROGRAM _CYCLIC
 			(*Packaging conveyer*)
 			doStartP := FALSE;
 			doMotorP := FALSE;
-
+//
 			(*Utils*)
 			doFeederC := FALSE;
 			doFeederB := FALSE;
@@ -69,18 +69,6 @@ PROGRAM _CYCLIC
 	END_CASE;
 	
 	(*Non case dependent if statements*)
-	
-	(*Prepare next crate*)	
-	IF (doBeforePusherC AND NOT diSensorCrateSecondScan) THEN
-		doStation1C := TRUE;
-	ELSIF (NOT diSensorCrateFirstScan AND crateFlag) THEN
-		crateFlag := FALSE;
-		doStation1C := FALSE;
-	ELSIF diSensorCrateFirstScan THEN
-		crateFlag := TRUE;
-	ELSIF (doBeforePusherC AND diSensorCrateFirstScan AND crateFlag) THEN
-		doStation1C := TRUE;
-	END_IF;
 	
 	(*Stop crate delivery*)
 	IF diSensorPackagingReady THEN
@@ -100,13 +88,14 @@ PROGRAM _CYCLIC
 	
 	
 	(* Timer for Case STATION_1_STATE *)
-	pushTimer(IN:=pushTimerInput, PT:=T#800ms);
+	pushTimer(IN:=pushTimerInput, PT:=T#1s);
 	
 	CASE STATION_1_STATE OF
 		NEXT_CRATE:
 			// Either we have the first package or we are waiting for the crate to move on.
 			IF (firstCrate AND diSensorCrateSecondScan AND NOT doAfterBeerFilling) THEN
 				doBeforePusherC := TRUE;
+				doStation1C := TRUE;
 				doStartC := TRUE;
 				doSlowDownC := TRUE;
 				firstCrate := FALSE;
@@ -116,8 +105,9 @@ PROGRAM _CYCLIC
 				//do_Motor_BeerBottle_Station_1 := TRUE;	
 			END_IF;
 			// If crate moves on:
-			IF diSensorFullCrate THEN
+			IF (diSensorFullCrate AND diSensorCrateSecondScan) THEN
 				doBeforePusherC := TRUE;
+				doStation1C := TRUE;
 				doStartC := TRUE;
 				doSlowDownC := TRUE;
 				doAfterBeerFilling := FALSE;
@@ -136,6 +126,7 @@ PROGRAM _CYCLIC
 		ROBOTACTION_STATION_1:
 			IF diSensorCrateSecondScan THEN
 				doBeforePusherC := FALSE;
+				doStation1C := FALSE;
 				doStartC := FALSE;
 			END_IF;
 			IF diBeerComplete THEN
@@ -152,6 +143,15 @@ PROGRAM _CYCLIC
 			IF diSensorFullCrate THEN
 				doAfterBeerFilling := FALSE;
 			END_IF;	
+			IF NOT diSensorCrateSecondScan AND NOT doBeforePusherC THEN
+				doBeforePusherC := TRUE;
+				doStation1C := TRUE;
+			ELSIF diSensorCrateSecondScan THEN
+				doBeforePusherC := FALSE;
+				doStation1C := FALSE;
+				doStartC := FALSE;
+				END_IF;
+				
 			
 
 	END_CASE;
@@ -179,8 +179,7 @@ PROGRAM _CYCLIC
 					STATION_2_STATE := NO_PALLET;
 				END_IF;
 			END_IF;
-		STATION_2_PAUSE:
-		
+			
 			
 		
 	END_CASE;	

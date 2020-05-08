@@ -3,8 +3,16 @@ Position X=0 Y=0 Width=0 Height=0 TabWidth Name=174 Type=0 Scope=0 Force=0 Index
                                     name                                     type force                                                            value level type len format place expand specs
                                crateFlag                                     BOOL    0 "                                                           FALSE"    0    1    1    2    1    0         
                   diSensorCrateFirstScan                                     BOOL    0 "                                                           FALSE"    0    1    1    2    1    0         
+                        diPalletComplete                                     BOOL    0 "                                                           FALSE"    0    1    1    2    1    0         
+                         STATION_1_STATE                                     DINT    0 "                                                               2"    0    4    1   10    1    0 e,0,NEXT
+
+                          diSensorBottle                                     BOOL    0 "                                                            TRUE"    0    1    1    2    1    0         
                           diBeerComplete                                     BOOL    0 "                                                           FALSE"    0    1    1    2    1    0         
-                 diSensorCrateSecondScan                                     BOOL    0 "                                                            TRUE"    0    1    1    2    1    0         
+                 diSensorCrateSecondScan                                     BOOL    0 "                                                           FALSE"    0    1    1    2    1    0         
                       doAfterBeerFilling                                     BOOL    0 "                                                           FALSE"    0    1    1    2    1    0         
                          doBeforePusherC                                     BOOL    0 "                                                           FALSE"    0    1    1    2    1    0         
+                             doStation1C                                     BOOL    0 "                                                           FALSE"    0    1    1    2    1    0         
                              doSlowDownC                                     BOOL    0 "                                                           FALSE"    0    1    1    2    1    0         
+                               doFeederP                                     BOOL    0 "                                                            TRUE"    0    1    1    2    1    0         
+                         STATION_2_STATE                                     DINT    0 "                                                               1"    0    4    1   10    1    0 e,0,NO_P
+
