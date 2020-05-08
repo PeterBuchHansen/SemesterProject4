@@ -1,2 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<breakpoints />
+<breakpoints>
+  <breakpoint>
+    <status>Y</status>
+    <file>Logical/Program/Main.st</file>
+    <position>139</position>
+    <condition></condition>
+    <instance></instance>
+    <program>Program</program>
+  </breakpoint>
+</breakpoints>
