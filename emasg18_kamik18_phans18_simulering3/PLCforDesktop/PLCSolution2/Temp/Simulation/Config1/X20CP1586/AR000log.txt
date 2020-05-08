@@ -1,21 +1,147 @@
-Fri May  8 07:57:06 2020
+Fri May  8 09:38:41 2020
 COPYRIGHT (C) B&R Industrial Automation GmbH
 
-Fri May  8 07:57:06 2020
+Fri May  8 09:38:41 2020
 No ARsim registration found!
 
-Fri May  8 07:57:06 2020
-InstanceName: 01d624fd81003a90
+Fri May  8 09:38:41 2020
+InstanceName: 01d6250bb20c0b10
 
-Fri May  8 07:57:06 2020
-WorkingDirectory: C:\Users\Emil\Documents\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCforDesktop\PLCSolution2\Temp\Simulation\Config1\X20CP1586\
+Fri May  8 09:38:41 2020
+WorkingDirectory: C:\Users\Bruger\Documents\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCforDesktop\PLCSolution2\Temp\Simulation\Config1\X20CP1586\
 
-Fri May  8 07:57:06 2020
+Fri May  8 09:38:41 2020
 COMMAND_COLDSTART
 
-Fri May  8 07:57:08 2020
+Fri May  8 09:38:44 2020
 Version: C4.72
 
-Fri May  8 08:53:29 2020
+Fri May  8 09:55:18 2020
+COMMAND_TERMINATE
+
+Fri May  8 09:55:18 2020
+COMMAND_COLDSTART
+
+Fri May  8 09:55:20 2020
+Version: C4.72
+
+Fri May  8 09:55:20 2020
+COMMAND_TERMINATE
+
+Fri May  8 09:55:20 2020
+COMMAND_COLDSTART
+
+Fri May  8 09:55:23 2020
+Version: C4.72
+
+Fri May  8 10:16:58 2020
+COMMAND_TERMINATE
+
+Fri May  8 10:16:58 2020
+COMMAND_COLDSTART
+
+Fri May  8 10:17:01 2020
+Version: C4.72
+
+Fri May  8 10:17:01 2020
+COMMAND_TERMINATE
+
+Fri May  8 10:17:01 2020
+COMMAND_COLDSTART
+
+Fri May  8 10:17:03 2020
+Version: C4.72
+
+Fri May  8 11:52:07 2020
+COMMAND_TERMINATE
+
+Fri May  8 11:52:28 2020
+COMMAND_COLDSTART
+
+Fri May  8 11:52:30 2020
+Version: C4.72
+
+Fri May  8 11:53:01 2020
+COMMAND_TERMINATE
+
+Fri May  8 11:53:05 2020
+COMMAND_COLDSTART
+
+Fri May  8 11:53:08 2020
+Version: C4.72
+
+Fri May  8 12:22:59 2020
+COMMAND_TERMINATE
+
+Fri May  8 12:22:59 2020
+COMMAND_COLDSTART
+
+Fri May  8 12:23:02 2020
+Version: C4.72
+
+Fri May  8 12:23:02 2020
+COMMAND_TERMINATE
+
+Fri May  8 12:23:02 2020
+COMMAND_COLDSTART
+
+Fri May  8 12:23:04 2020
+Version: C4.72
+
+Fri May  8 12:45:54 2020
+COMMAND_TERMINATE
+
+Fri May  8 12:45:54 2020
+COMMAND_COLDSTART
+
+Fri May  8 12:45:56 2020
+Version: C4.72
+
+Fri May  8 12:45:56 2020
+COMMAND_TERMINATE
+
+Fri May  8 12:45:57 2020
+COMMAND_COLDSTART
+
+Fri May  8 12:45:59 2020
+Version: C4.72
+
+Fri May  8 13:00:13 2020
+COMMAND_TERMINATE
+
+Fri May  8 13:00:13 2020
+COMMAND_COLDSTART
+
+Fri May  8 13:00:15 2020
+Version: C4.72
+
+Fri May  8 13:00:15 2020
+COMMAND_TERMINATE
+
+Fri May  8 13:00:15 2020
+COMMAND_COLDSTART
+
+Fri May  8 13:00:18 2020
+Version: C4.72
+
+Fri May  8 14:06:01 2020
+COMMAND_TERMINATE
+
+Fri May  8 14:06:22 2020
+COMMAND_COLDSTART
+
+Fri May  8 14:06:24 2020
+Version: C4.72
+
+Fri May  8 14:06:24 2020
+COMMAND_TERMINATE
+
+Fri May  8 14:06:29 2020
+COMMAND_COLDSTART
+
+Fri May  8 14:06:31 2020
+Version: C4.72
+
+Fri May  8 14:10:41 2020
 COMMAND_TERMINATE
 

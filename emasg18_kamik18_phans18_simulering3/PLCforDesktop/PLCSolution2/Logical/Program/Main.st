@@ -11,7 +11,7 @@ PROGRAM _CYCLIC
 			(*Bottle conveyer*)
 			doStartB := TRUE;
 			doMotorB := TRUE;
-			do1StationB := TRUE;
+			//do1StationB := TRUE;
 
 			(*Crate conveyer*)
 			doStartC := TRUE;
@@ -25,17 +25,20 @@ PROGRAM _CYCLIC
 			(*Packaging conveyer*)
 			doStartP := TRUE;
 			doMotorP := TRUE;
-	
-			(*Utils*)
+			
+			(*Utils
 			doFeederC := TRUE;
 			doFeederB := TRUE;
-			doFeederP:= TRUE;
+			doFeederP:= TRUE;*)
 	
 			doPushC := FALSE;
 			firstCrate := TRUE;
 
+
 				
 			FACTORY_STATE := AWAIT_ORDER;
+			
+		
 			
 		AWAIT_ORDER:
 			
@@ -43,7 +46,7 @@ PROGRAM _CYCLIC
 			(*Bottle conveyer*)
 			doStartB := FALSE;
 			doMotorB := FALSE;
-			do1StationB := FALSE;
+			//do1StationB := FALSE;
 
 			(*Crate conveyer*)
 			doStartC := FALSE;
@@ -57,16 +60,37 @@ PROGRAM _CYCLIC
 			(*Packaging conveyer*)
 			doStartP := FALSE;
 			doMotorP := FALSE;
-//
+			
 			(*Utils*)
-			doFeederC := FALSE;
-			doFeederB := FALSE;
-			doFeederP:= FALSE;
+			//doDeleteAll := FALSE;
 		
 		RESET:
-			doDeleteAll := TRUE;
+			STATION_1_STATE := NEXT_CRATE;
+			STATION_2_STATE := NO_PALLET;
+			palletFlag := FALSE;
+			pushTimerInput := FALSE;
+			firstCrate := TRUE;
+			doPushC := FALSE;
+			doRBeer := FALSE;
+			doRPacking := FALSE;
+			diSensorCrateSecondScan := FALSE;
+			diSensorPalletInPos := FALSE;
+		
+			(*Utils
+			IF doDeleteAll THEN
+				doFeederC := FALSE;
+				doFeederB := FALSE;
+				doFeederP:= FALSE;
+				
+				
+			ELSE
+				doDeleteAll := TRUE;
+			END_IF;*)
+			
 			FACTORY_STATE := STOP;
+		
 	END_CASE;
+
 	
 	(*Non case dependent if statements*)
 	
@@ -79,16 +103,16 @@ PROGRAM _CYCLIC
 
 	(*Stop bottle feeder if line is full*)
 	IF diSensorBottle THEN
-		do1StationB := FALSE;
+		//do1StationB := FALSE;
 		doStartB := FALSE;
 	ELSE
-		do1StationB := TRUE;
+		//do1StationB := TRUE;
 		doStartB := TRUE;
 	END_IF;
 	
 	
 	(* Timer for Case STATION_1_STATE *)
-	pushTimer(IN:=pushTimerInput, PT:=T#1s);
+	pushTimer(IN:=pushTimerInput, PT:=T#2s);
 	
 	CASE STATION_1_STATE OF
 		NEXT_CRATE:
