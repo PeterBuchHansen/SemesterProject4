@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <?AutomationStudio Version=4.7.2.98?>
 <State Top="0" Left="0" Width="0" Height="0" WindowState="Normal" xmlns="http://br-automation.co.at/AS/State">
-  <TextEdit ID="C:\Users\Bruger\Documents\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCforDesktop\PLCSolution2\Logical\Program\Main.st" CaretLine="90" CaretColumn="47" FirstVisibleLine="91">
+  <TextEdit ID="C:\Users\Bruger\Documents\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCforDesktop\PLCSolution2\Logical\Program\Main.st" CaretLine="171" CaretColumn="11" FirstVisibleLine="148">
     <Bookmarks />
   </TextEdit>
   <TreeView ID="C:\Users\Bruger\Documents\GitHub\SemesterProject4\emasg18_kamik18_phans18_simulering3\PLCforDesktop\PLCSolution2\Logical\Program\Variables.var" EditColumn="0" TopRow="7" HorizontalScrollOffset="0" SortedColumn="0">

@@ -3,7 +3,31 @@
   <breakpoint>
     <status>Y</status>
     <file>Logical/Program/Main.st</file>
-    <position>139</position>
+    <position>20</position>
+    <condition></condition>
+    <instance></instance>
+    <program>Program</program>
+  </breakpoint>
+  <breakpoint>
+    <status>Y</status>
+    <file>Logical/Program/Main.st</file>
+    <position>10</position>
+    <condition></condition>
+    <instance></instance>
+    <program>Program</program>
+  </breakpoint>
+  <breakpoint>
+    <status>Y</status>
+    <file>Logical/Program/Main.st</file>
+    <position>143</position>
+    <condition></condition>
+    <instance></instance>
+    <program>Program</program>
+  </breakpoint>
+  <breakpoint>
+    <status>Y</status>
+    <file>Logical/Program/Main.st</file>
+    <position>136</position>
     <condition></condition>
     <instance></instance>
     <program>Program</program>

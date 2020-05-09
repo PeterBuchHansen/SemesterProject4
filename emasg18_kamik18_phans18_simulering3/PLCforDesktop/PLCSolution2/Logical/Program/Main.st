@@ -1,6 +1,6 @@
 
 PROGRAM _INIT
-
+//
 END_PROGRAM
 
 
