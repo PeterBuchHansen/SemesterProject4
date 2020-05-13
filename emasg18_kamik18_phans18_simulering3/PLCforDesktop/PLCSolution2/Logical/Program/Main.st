@@ -1,6 +1,5 @@
 
 PROGRAM _INIT
-//
 END_PROGRAM
 
 
@@ -11,7 +10,6 @@ PROGRAM _CYCLIC
 			(*Bottle conveyer*)
 			doStartB := TRUE;
 			doMotorB := TRUE;
-			//do1StationB := TRUE;
 
 			(*Crate conveyer*)
 			doStartC := TRUE;
@@ -37,7 +35,6 @@ PROGRAM _CYCLIC
 			(*Bottle conveyer*)
 			doStartB := FALSE;
 			doMotorB := FALSE;
-			//do1StationB := FALSE;
 
 			(*Crate conveyer*)
 			doStartC := FALSE;
@@ -101,7 +98,6 @@ PROGRAM _CYCLIC
 				doAfterBeerFilling := FALSE;
 				pushTimerInput := TRUE;
 				STATION_1_STATE := PUSH; 
-				//do_Motor_BeerBottle_Station_1 := TRUE;	
 			END_IF;
 			// If crate moves on:
 			IF (diSensorFullCrate AND diSensorCrateReady) THEN
