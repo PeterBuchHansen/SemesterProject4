@@ -1,0 +1,50 @@
+(*Bottle conveyer*)
+VAR
+	doStartB : BOOL;
+	doMotorB : BOOL; (*diSensorBConFull : BOOL;*) (*	do1StationB : BOOL;
+	do2StationB : BOOL; *)
+END_VAR
+(*Crate Sensor*)
+VAR
+	diSensorBottle : BOOL;
+END_VAR
+(*Crate conveyer*)
+VAR
+	doStartC : BOOL;
+	doMotorC : BOOL;
+	doStation1C : BOOL;
+	doSlowDownC : BOOL;
+	doBeforePusherC : BOOL;
+END_VAR
+(*Packaging conveyer*)
+VAR
+	doAfterBeerFilling : BOOL;
+	doStartP : BOOL;
+	doStation2C : BOOL;
+	doMotorP : BOOL;
+END_VAR
+(*Utils*)
+VAR
+	diSensorCrateReady : BOOL; (*diSensorCrateFirstScan : BOOL;*)
+	diSensorFullCrate : BOOL;
+	diSensorPackagingReady : BOOL;
+	diSensorPalletInPos : BOOL;
+END_VAR
+(*Robot*)
+VAR
+	doRBeer : BOOL;
+	diBeerComplete : BOOL;
+	doRPacking : BOOL;
+	diPalletComplete : BOOL;
+END_VAR
+(*Miscellaneous*)
+VAR
+	FACTORY_STATE : FACTORY;
+	STATION_1_STATE : STATION_1;
+	STATION_2_STATE : STATION_2;
+	firstCrate : BOOL;
+	pushTimer : TON; (*bottleInput : BOOL;*) (*pushCompleteInput : BOOL;*)
+	pushTimerInput : BOOL;
+	doPushC : BOOL;
+	palletFlag : BOOL; (*crateFlag : BOOL;*)
+END_VAR
